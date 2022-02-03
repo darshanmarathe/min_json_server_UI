@@ -1,13 +1,337 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: Mulish;
+  src: url('./assets/fonts/Mulish-VariableFont_wght.ttf');
 }
+
+
+body{
+  font-family: Mulish;
+}
+
+
+
+/* ----------------------- Login Page ---------------*/
+
+.loginMain{
+  height: 100vh;
+  min-height: 682px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.loginForm{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.loginForm form{
+  height: auto;
+  width: auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.field{
+  height: auto;
+  width: auto;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.field input{
+  height: auto;
+  width: 280px;
+  padding: 10px 0 10px 8px;
+}
+.errors{
+  margin: 4px 0 0 0;
+  color:rgb(182, 3, 3)
+}
+.loginForm form button{
+  width: 190px;
+  height: 36px;
+  border-radius: 2px;
+  background-color: #4921d8;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 16px;
+}
+
+
+
+
+
+
+/* ----------------------- Admin Page ---------------*/
+.DashboardMain{
+  height: 100vh;
+  min-height: 682px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(209, 209, 209);
+}
+.profile{
+  position: absolute;
+  right: 10px;
+  height: 100%;
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  justify-self: flex-end;
+  align-self: flex-end;
+  
+}
+.userImage{
+  height: 80%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+.userImage img{
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+.sideMenu{
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 15%;
+  height: 90%;
+  padding: 10px;
+  background-color: #0d0d41;
+}
+.option{
+  width: 100%;
+  height: auto;
+  padding: 10px 0 10px 0;
+  margin: 5px 0 5px 0;
+  display: inline-flex;
+  /* background-color: aliceblue; */
+  display: flex;
+  flex-direction: row;
+}
+.sideMenu li{
+  list-style: none;
+}
+.option label{
+  color: #ffffff;
+}
+
+.link{
+  margin-left: 10px;
+  color: #ffffff;
+  align-self: right;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+.activityGround{
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  height: 90%;
+  width: 85%;
+  background-color: #dfdfdf;
+}
+
+
+.collectionMain{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.CollectionHeads{
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  row-gap: 20px;
+  column-gap: 20px;
+}
+.CollectionHeads .head{
+  height: 38px;
+  width: 90px;
+  background-color: #313131;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.ModalMain{
+  height: auto;
+  width: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  display: none;
+}
+.ModalMain form{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 32px;
+}
+.ModalMain form .headName{
+  width: 320px;
+}
+.ModalMain form button{
+  width: 190px;
+  height: 36px;
+  border-radius: 2px;
+  background-color: #0d0d41;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+  margin: 16px;
+}
+.headName input{
+  padding: 8px 0 5px 0;
+  width: 320px;
+}
+.checkBoxes{
+  height: auto;
+  width: 320px;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+.checkbox{
+  margin: 10px 0 10px 0;
+}
+.checkbox label{
+  margin-left: 10px;
+}
+.proxiesNurls{
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-around;
+
+}
+.proxies{
+  height: auto;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+.proxyField{
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.urls{
+  height: auto;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+}
+.urlsfield{
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+.proxies *, .urls *{
+  margin: 5px 0 5px 0;
+  
+}
+.proxies input, .urls input{
+width: 260px;
+height: auto;
+padding: 8px 0 8px 5px;
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  display: none;
+}
+.closeBtn{
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  color:#000000;
+  cursor: pointer;
+ 
+}
+
+
+
