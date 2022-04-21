@@ -29,6 +29,7 @@ const LoginPage = () => {
             console.log(values);
             dispatch(getUserData(values.userName, values.password))
             console.log(initState)
+            console.log(values)
             if(initState.userName === values.userName && initState.password === values.password ){
                 dispatch(authenticateUser(true));
                 navigate('/admin');
