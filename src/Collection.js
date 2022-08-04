@@ -23,18 +23,21 @@ const Collection = () => {
   }
 
   let getData = async () =>{
-    let res = await fetch('http://localhost:4000');
-    let data =  await res.json();
-    setHeads(data);
-    console.log(data);
+    try {
+      let res = await fetch(window.baseUrl);
+      let data =  await res.json();
+      setHeads(data);
+      console.log(data);    
+    } catch (error) {
+      console.warn(error)
+    }
   }
 
   useEffect(() =>{
     getData();
-  })
+  } , [])
 
- 
-  getData();
+
   return(
       <>
       <div className='collectionMain'>

@@ -17,6 +17,9 @@ const LoginPage = () => {
         },
         validate: (values) =>{
             let errors = {};
+            if(!values.url){
+                errors.url = 'Please Enter url';
+            }
             if(!values.userName){
                 errors.userName = 'Please Enter Username';
             }
@@ -26,12 +29,11 @@ const LoginPage = () => {
             return errors;
         },
         onSubmit: (values) =>{
-            console.log(values);
+         
             dispatch(getUserData(values.userName, values.password))
-            console.log(initState)
-            console.log(values)
             if(initState.userName === values.userName && initState.password === values.password ){
                 dispatch(authenticateUser(true));
+                window.baseUrl = values.url;
                 navigate('/admin');
             }
             else{
